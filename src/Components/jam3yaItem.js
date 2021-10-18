@@ -1,20 +1,20 @@
 import React from "react";
 
-export default function CourseItem(props) {
-  const course = props.course;
+export default function jam3yaItem(props) {
+  const jam3ya = props.jam3ya;
   return (
     <div class="col-xl-4 col-lg-4 col-md-6">
       <div class="single-course wow fadeInUp" data-wow-delay=".2s">
         <div class="course-img">
           <a href="course-single.html">
-            <img src={course.image} alt="" />
+            <img src={jam3ya.image} alt="" />
           </a>
         </div>
-        <div class="course-info">
+        <div class="jam3ya-info">
           <h4>
-            <a href="course-single.html">{course.title}</a>
+            <a href="course-single.html">{jam3ya.title}</a>
           </h4>
-          <div class="course-meta">Instructor : {course.instructor}</div>
+          <div class="course-meta">Jam3ya : {jam3ya.title}</div>
         </div>
       </div>
     </div>

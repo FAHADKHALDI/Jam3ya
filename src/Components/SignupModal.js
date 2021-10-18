@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Modal, Button } from "react-bootstrap";
-import authStore from "../stores/authStore";
+import authStore from "../Stores/authStore";
 
 export default function SignupModal(props) {
   const [user, setUser] = useState({

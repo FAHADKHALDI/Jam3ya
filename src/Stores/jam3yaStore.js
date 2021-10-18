@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 import api from "./api";
 
 class jam3yaStore {
-  courses = [];
+  jam3yat = [];
 
   constructor() {
     makeAutoObservable(this, {});

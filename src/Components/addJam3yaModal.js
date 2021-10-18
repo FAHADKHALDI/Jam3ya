@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
-import courseStore from "../stores/courseStore";
+import jam3yaStore from "../Stores/courseStore";
 
-export default function AddCourseModal(props) {
-  const [course, setCourse] = useState({
+export default function AddJam3yaModal(props) {
+  const [jam3ya, setJam3ya] = useState({
     title: "",
     image: "",
   });
   const handleChange = (event) => {
-    setCourse({ ...course, [event.target.name]: event.target.value });
+    setJam3ya({ ...course, [event.target.name]: event.target.value });
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    courseStore.createCourse(course);
+    jam3yaStore.createJam3ya(jam3ya);
     props.closeModal();
   };
   return (
@@ -24,17 +24,17 @@ export default function AddCourseModal(props) {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">Add Course</Modal.Title>
+        <Modal.Title id="contained-modal-title-vcenter">Add Jam3ya</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form>
           <Form.Group className="mb-3">
-            <Form.Label>Course title</Form.Label>
+            <Form.Label>Jam3ya title</Form.Label>
             <Form.Control
               type="text"
               onChange={handleChange}
               name="title"
-              placeholder="Enter course title"
+              placeholder="Enter Jam3ya title"
             />
           </Form.Group>
 
@@ -48,11 +48,11 @@ export default function AddCourseModal(props) {
             />
           </Form.Group>
         </Form>
-        <p>only registered users can create courses</p>
+        <p>only registered users can create Jam3yat</p>
       </Modal.Body>
       <Modal.Footer>
         <Button variant="warning" onClick={handleSubmit}>
-          Add Course
+          Add Jam3ya
         </Button>
         <Button variant="warning" onClick={props.closeModal}>
           Close
