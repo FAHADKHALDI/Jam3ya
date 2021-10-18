@@ -5,6 +5,7 @@ import authStore from "../Stores/authStore";
 export default function SignupModal(props) {
   const [user, setUser] = useState({
     username: "",
+    email: "",
     password: "",
   });
   const handleChange = (event) => {
@@ -37,6 +38,16 @@ export default function SignupModal(props) {
               onChange={handleChange}
               name="username"
               placeholder="Enter your username"
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              type="text"
+              onChange={handleChange}
+              name="email"
+              placeholder="Enter your e-mail"
             />
           </Form.Group>
 

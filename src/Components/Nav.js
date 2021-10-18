@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/images/money-png.jpg";
+import logo from "../assets/images/money.jpg";
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import SignupModal from "./SignupModal";
@@ -43,7 +43,7 @@ function Nav() {
                         <Link to="/">Home</Link>
                       </li>
                       <li class="nav-item">
-                        <NavLink to="/jam3yat">jam3yat</NavLink>
+                        <NavLink to="/jam3ya">jam3yat</NavLink>
                       </li>
 
                       {authStore.user ? (

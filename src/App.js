@@ -10,7 +10,7 @@ function App() {
       <Nav />
 
       <Switch>
-        <Route path="/">
+        <Route path="/Jam3yat">
           <jam3yaList />
         </Route>
         <Route exact path="/">

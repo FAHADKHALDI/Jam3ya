@@ -1,5 +1,5 @@
 import React from "react";
-import dotShape from "../assets/images/money-png.jpg";
+import dotShape from "../assets/images/money.jpg";
 import { Link } from "react-router-dom";
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
                   class="main-btn wow fadeInUp"
                   data-wow-delay=".6s"
                 >
-                  <Link to="/jam3yat">jam3yat</Link>
+                  <Link to="/jam3ya">jam3ya</Link>
                 </a>
               </div>
             </div>
