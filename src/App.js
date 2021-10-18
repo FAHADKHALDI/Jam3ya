@@ -1,8 +1,7 @@
 import "./App.css";
-
+import jam3yaList from "./Components/jam3yaList";
 import Nav from "./Components/NavBar";
 import Home from "./Components/Home";
-
 import { Route, Switch } from "react-router";
 function App() {
   return (
@@ -10,7 +9,7 @@ function App() {
       <Nav />
 
       <Switch>
-        <Route path="/Jam3yat">
+        <Route exact path="/jam3ya">
           <jam3yaList />
         </Route>
         <Route exact path="/">

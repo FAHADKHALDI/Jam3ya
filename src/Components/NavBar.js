@@ -11,55 +11,57 @@ function Nav() {
   const [signIn, setSignIn] = useState(false);
 
   return (
-    <nav class="navbar navbar-dark bg-primary">
-      <a class="navbar-brand" href="#">
-        <NavLink to="/">
-          <img id="logo" src={logo} alt="Logo" width="77" height="77" />
-        </NavLink>
-        Jam3ya{" "}
-      </a>
-      <h5 className="nav-item">
-        <Link to="/">Home</Link>
-      </h5>
-      <h5 className="nav-item">
-        <NavLink to="/jam3ya">jam3yat</NavLink>
-      </h5>
-      {authStore.user ? (
-        <>
-          <h5 className="nav-item">Hello {authStore.user.username}</h5>
-          <h5 className="nav-item">
-            <Button onClick={() => authStore.logout()}>Logout</Button>{" "}
-          </h5>
-        </>
-      ) : (
-        <>
-          <h5 className="nav-item">
-            <Button
-              onClick={() => {
-                setSignupIsOpen(true);
-                setSignIn(false);
-              }}
-            >
-              Sign up
-            </Button>
-          </h5>
-          <h5>
-            <Button
-              onClick={() => {
-                setSignupIsOpen(true);
-                setSignIn(true);
-              }}
-            >
-              Sign in
-            </Button>
-            <SignupModal
-              signIn={signIn}
-              closeModal={() => setSignupIsOpen(false)}
-              isOpen={signupIsOpen}
-            />
-          </h5>
-        </>
-      )}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <NavLink to="/">
+            <img id="logo" src={logo} alt="Logo" width="77" height="77" />
+          </NavLink>
+        </a>
+
+        <h5 className="nav-item">
+          <Link to="/">Home</Link>
+        </h5>
+        <h5 className="nav-item">
+          <NavLink to="jam3ya">jam3yat</NavLink>
+        </h5>
+        {authStore.user ? (
+          <>
+            <h5 className="nav-item">Hello {authStore.user.username}</h5>
+            <h5 className="nav-item">
+              <Button onClick={() => authStore.logout()}>Logout</Button>{" "}
+            </h5>
+          </>
+        ) : (
+          <>
+            <h5 className="nav-item">
+              <Button
+                onClick={() => {
+                  setSignupIsOpen(true);
+                  setSignIn(false);
+                }}
+              >
+                Sign up
+              </Button>
+            </h5>
+            <h5>
+              <Button
+                onClick={() => {
+                  setSignupIsOpen(true);
+                  setSignIn(true);
+                }}
+              >
+                Sign in
+              </Button>
+              <SignupModal
+                signIn={signIn}
+                closeModal={() => setSignupIsOpen(false)}
+                isOpen={signupIsOpen}
+              />
+            </h5>
+          </>
+        )}
+      </div>
     </nav>
   );
 }
