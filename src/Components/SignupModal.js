@@ -27,7 +27,9 @@ export default function SignupModal(props) {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">Signup</Modal.Title>
+        <Modal.Title id="contained-modal-title-vcenter">
+          SignUp/SignIn
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleSubmit}>
