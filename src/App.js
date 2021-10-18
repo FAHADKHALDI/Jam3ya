@@ -1,12 +1,12 @@
 import "./App.css";
 
-import Nav from "./Components/Nav";
+import Nav from "./Components/NavBar";
 import Home from "./Components/Home";
 
 import { Route, Switch } from "react-router";
 function App() {
   return (
-    <div className="App">
+    <div>
       <Nav />
 
       <Switch>

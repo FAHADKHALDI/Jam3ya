@@ -25,9 +25,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div class="hero-left">
-        <img src={dotShape} alt="" class="shape" />
-      </div>
     </section>
   );
 }
