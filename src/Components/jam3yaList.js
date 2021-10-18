@@ -8,7 +8,7 @@ function jam3yaList() {
   const [isOpen, setIsOpen] = useState(false);
   const closeModal = () => setIsOpen(false);
   const openModal = () => setIsOpen(true);
-  const jam3yat = jam3yaStore.jam3ya.map((jam3ya) => (
+  const jam3yat = jam3yaStore.jam3yat.map((jam3ya) => (
     <jam3yaItem jam3ya={jam3ya} />
   ));
   return (
