@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import logo from "../assets/images/logo.svg";
+import logo from "../assets/images/money-png.jpg";
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import SignupModal from "./SignupModal";
-import authStore from "../stores/authStore";
+import authStore from "../Stores/authStore";
 import { observer } from "mobx-react";
 
 function Nav() {
@@ -43,7 +43,7 @@ function Nav() {
                         <Link to="/">Home</Link>
                       </li>
                       <li class="nav-item">
-                        <NavLink to="/courses">Courses</NavLink>
+                        <NavLink to="/jam3yat">jam3yat</NavLink>
                       </li>
 
                       {authStore.user ? (
